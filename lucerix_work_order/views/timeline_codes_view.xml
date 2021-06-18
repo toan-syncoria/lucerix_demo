@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mrp_timeline_codes_tree_view" model="ir.ui.view">
+            <field name="name">mrp.timeline.codes.tree.view</field>
+            <field name="model">mrp.timeline.codes</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="1" delete="1" multi_edit="1">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="mrp_timeline_codes_action" model="ir.actions.act_window">
+            <field name="name">Timeline Codes</field>
+            <field name="res_model">mrp.timeline.codes</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="menu_mrp_timeline_codes"
+                  name="Timeline Codes"
+                  action="mrp_timeline_codes_action"
+                  parent="mrp.menu_mrp_configuration"
+                  sequence="100"/>
+
+    </data>
+</odoo>
